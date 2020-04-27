@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <style>
+        .body {
+            font-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            height: 100%;
+            position: relative;
+            text-align: left;
+        }
+
+        .container .biwt-image {
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .container .text-block {
+            padding: 7%;
+            position: absolute;
+            height: auto;
+            width: auto;
+        }
+
+        .container .text-block h2 {
+            font-size: 6.5vw;
+            color: white;
+        }
+
+        .container .text-block h4 {
+            margin-top: 30%;
+            font-size: 3vw;
+            color: white;
+            text-align: right;
+        }
+
+        .href-homepage {
+            position: relative;
+            top: -300%;
+        }
+
+        .href-homepage #href {
+            text-decoration: none;
+            display: block;
+            color: white;
+            font-size: 2vw;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="body" style=background-color:black;>
+    <div class="container">
+        <img class="biwt-image"
+            src="https://previews.dropbox.com/p/thumb/AAxz7aum0CzW7RpP7Ap4kgsI8XEJbR--Jz4ue6brQkN15UkSV37wuYmNMtqIG6qsC_XiSo0M8c-nmuk5HN4PoMEQyzeVekBjuSCfpsdE78GzGgz9HyYSK-m3oWkdLNV9S-jjz0eCwekABOT5-Hdxdeh9MsmSs0MgB9iwIj3oq2SrqpEp19fDhIFwb-r8wi2gzpNvvg-pi1twX-B1vKbO00jmbm9vvCngWkYHWetmBsx44xKhKU2Qb379uvx_0MJ5Nrj64VOI-qxR1FzooQ3PDc7Srv5Xqs8a_QWYDkQfbkZ2HGPowbWOZaHWQnPz3QZfRbhLMzIfKDLyrxVU5DlDXUVlXvTidxfGaOpfdfUiUZoxtQ/p.jpeg?size=2048x1536&size_mode=3">
+
+        <div class="text-block">
+            <h2>We are </h2>
+            <h2>Because I Want To</h2>
+        </div>
+
+        <div class="href-homepage">
+            <a id="href" href="{% url 'about' %}"><b>Go to Homepage</b></a>
+        </div>
+</body>
+
+</html>
