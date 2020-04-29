@@ -1,0 +1,23 @@
+<h1>회원가입 페이지</h1>
+<h3>아이디/비번 분실시 찾을 수 있는 방법이 1도 없으니 잘 기억해둬 ID비번 찾기 기능은 없어 ㅎㅎ</h3>
+<h3>회원가입 성공시 아무런 메세지 없이 홈화면으로 바로감</h3>
+<h3>로그인 url은 url주소 뒤에 /biwtlogin 쳐주면 나옵니다</h3>
+<p>If an error occurs, a message will appear below:</p>
+{% if error %}
+<b>{{ error }}</b>
+{% endif %}
+<br>
+<form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <p>ID</p>
+    <input name="username" type="text" value="" requied>
+    <br>
+    <p>PW</p>
+    <input name="password1" type="password" value="" required>
+    <br>
+    <p>Confirm your PW</p>
+    <input name="password2" type="password" value="" required>
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Signup">
+</form>

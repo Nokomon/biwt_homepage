@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<h3>Only those authorized may enter beyond this point.</h3>
+<h4>If you are not an authorized member, please go back.</h4>
+<br>
+<p>If an error occurs, a message will appear below:</p>
+{% if error %}
+<b>{{ error }}</b>
+{% endif %}
+<br>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <p>ID</p>
+    <input name="username" type="text" value="" required>
+    <br>
+    <p>PW</p>
+    <input name="password" type="password" value="" required>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Login">
+</form>
